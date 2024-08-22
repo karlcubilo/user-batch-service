@@ -15,8 +15,8 @@ public class H2RepositoryConfiguration {
     public DataSource batchH2Datasource() {
         EmbeddedDatabaseBuilder embeddedDatabaseBuilder = new EmbeddedDatabaseBuilder();
         return embeddedDatabaseBuilder
-                .addScript("classpath:org/springframework/batch/core/schema-drop-mysql.sql")
-                .addScript("classpath:org/springframework/batch/core/schema-mysql.sql")
+                .addScript("classpath:org/springframework/batch/core/schema-drop-h2.sql")
+                .addScript("classpath:org/springframework/batch/core/schema-h2.sql")
                 .setType(EmbeddedDatabaseType.H2)
                 .build();
     }
